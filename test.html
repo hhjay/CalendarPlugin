@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
+    <title>测试</title>
+    <style type="text/css">
+        .btn{
+            position: relative;
+            margin: 0 auto;
+            width: 80px;
+            height: 30px;
+            background: red;
+            color: #fff;
+            font-size: 18px;
+            text-align: center;
+        }
+    	.cal{
+    		position: relative;
+    		margin: 0 auto;
+            width: 50px;
+            height: 50px;
+            background: #fff;
+    	}
+
+    </style>
+</head>
+<body>
+    <div class="btn">打开日历</div>
+	<div class="cal"></div>
+
+    <script src="http://mat1.gtimg.com/www/asset/lib/jquery/jquery-1.11.3.min.js"></script>
+    <script src="http://mat1.gtimg.com/sports/johntfma/calendar/calendar.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var foo = function(){
+                console.log("foo");
+            }
+            $(".cal").add_calendar($(".btn"), foo);
+        });
+    </script>
+</body>
+</html>
