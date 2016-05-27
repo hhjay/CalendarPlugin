@@ -30,13 +30,15 @@
 	<div class="cal"></div>
 
     <script src="http://mat1.gtimg.com/www/asset/lib/jquery/jquery-1.11.3.min.js"></script>
-    <script src="http://mat1.gtimg.com/sports/johntfma/calendar/calendar.js"></script>
+    <script src="calendar.js"></script>
     <script type="text/javascript">
         $(function(){
             var foo = function(){
                 console.log("foo");
             }
-            $(".cal").add_calendar($(".btn"), foo);
+            //$(".cal").add_calendar($(".btn"), foo);       // 使用jQuery插件创建日历
+
+            calendarFactory.add_calendar($(".cal"), $(".btn"), foo);          // 使用增强的模块模式创建日历
         });
     </script>
 </body>
